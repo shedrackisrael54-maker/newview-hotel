@@ -200,7 +200,7 @@ p{margin:0 0 1rem}
 /* Welcome */
 .welcome-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
 .welcome-art{position:relative}
-.welcome-art .frame-main{border-radius:var(--arch);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5}
+.welcome-art .frame-main{border-radius:var(--arch-hero);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
 .welcome-art .frame-main img{width:100%;height:100%;object-fit:cover}
 .badge{
   position:absolute;right:-10px;bottom:26px;background:var(--ink);color:var(--paper);
@@ -230,48 +230,20 @@ p{margin:0 0 1rem}
 
 /* Rooms */
 .rooms-top{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:flex-end;justify-content:space-between}
-.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.7rem;margin-top:2.8rem}
-.room{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
-.room:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.room-img{position:relative;padding:14px 14px 0}
-.room-img .in{border-radius:var(--arch-sm);overflow:hidden;aspect-ratio:4/3.2}
-.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.room:hover .room-img img{transform:scale(1.05)}
-.room-tag{position:absolute;z-index:3;left:24px;top:24px;background:rgba(10,22,19,.82);color:var(--brass-lt);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:.35rem .6rem}
-.room-img:has(.room-plate) .room-tag{background:var(--brass);color:var(--ink-3);font-weight:700}
-.room-body{padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
-.room-body h3{margin-bottom:.45rem}
-.room-feat{list-style:none;margin:.2rem 0 1.1rem;padding:0;font-size:.83rem;color:var(--text-soft);display:flex;flex-wrap:wrap;gap:.3rem .9rem}
-.room-feat li{position:relative;padding-left:.75rem}
-.room-feat li::before{content:"";position:absolute;left:0;top:.62rem;width:4px;height:4px;background:var(--brass);border-radius:50%}
-.room-price{margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding-top:1rem;border-top:1px solid var(--line);margin-bottom:1rem}
-.room-price .amt{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--ink)}
-.room-price .per{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--text-soft)}
-
-/* Room card with no photo yet */
-.room-plate{
-  position:relative;height:100%;background:var(--ink);
-  display:grid;place-items:center;text-align:center;padding:1.6rem 1.2rem;overflow:hidden;
-}
-.room-plate::before{
-  content:"";position:absolute;width:150%;aspect-ratio:1;left:50%;top:34%;
-  transform:translate(-50%,-50%);border:1px solid rgba(199,154,76,.22);border-radius:50%;
-}
-.room-plate::after{
-  content:"";position:absolute;width:104%;aspect-ratio:1;left:50%;top:34%;
-  transform:translate(-50%,-50%);border:1px solid rgba(199,154,76,.16);border-radius:50%;
-}
-.room-plate .pl-in{position:relative;z-index:2}
-.room-plate .pl-mark{
-  width:44px;height:52px;margin:0 auto .8rem;border:1px solid var(--brass);
-  border-radius:var(--arch-sm);display:grid;place-items:center;
-  font-family:"Fraunces",serif;font-size:1.05rem;color:var(--brass-lt);
-}
-.room-plate .pl-name{font-family:"Fraunces",serif;color:var(--paper);font-size:1.16rem;line-height:1.2}
-.room-plate .pl-note{
-  font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--brass);margin-top:.6rem;
-}
+/* Single room type layout */
+.oneroom{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.8rem,5vw,3.6rem);align-items:center;margin-top:2.8rem}
+.oneroom-shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.oneroom-shots figure{margin:0;overflow:hidden;border-radius:6px;aspect-ratio:1}
+.oneroom-shots figure:first-child{grid-column:1/-1;aspect-ratio:16/11;border-radius:var(--arch-sm)}
+.oneroom-shots img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.oneroom-shots figure:hover img{transform:scale(1.05)}
+.oneroom-body .rate{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:1.2rem 0 .2rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.oneroom-body .rate .amt{font-family:"Fraunces",serif;font-size:clamp(2rem,4.6vw,2.9rem);line-height:1;color:var(--ink)}
+.oneroom-body .rate .per{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--text-soft)}
+.oneroom-feat{list-style:none;margin:1.2rem 0 1.6rem;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.2rem}
+.oneroom-feat li{display:flex;gap:.55rem;align-items:flex-start;font-size:.92rem}
+.oneroom-feat li::before{content:"";flex:none;width:7px;height:7px;margin-top:.55rem;background:var(--brass);border-radius:50% 50% 0 0}
+@media (max-width:900px){ .oneroom{grid-template-columns:1fr} }
 
 /* Split feature */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,5vw,4.5rem);align-items:center}
@@ -572,15 +544,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <!-- ===================== ROOMS ===================== -->
 <section class="sec" id="rooms">
   <div class="wrap">
-    <div class="rooms-top rv">
-      <div class="sec-head">
-        <span class="eyebrow">Accommodation</span>
-        <h2>Rooms and suites</h2>
-        <p class="lead">Five room types, from a compact single for a working trip to a suite on the upper floors for a long stay.</p>
-      </div>
-      <a class="btn btn-outline" href="#gallery">View gallery</a>
+    <div class="sec-head rv">
+      <span class="eyebrow">Accommodation</span>
+      <h2>One room. One rate.</h2>
+      <p class="lead" id="roomBlurb"></p>
     </div>
-    <div class="rooms-grid" id="roomsGrid"></div>
+    <div class="oneroom rv">
+      <div class="oneroom-shots" id="roomShots"></div>
+      <div class="oneroom-body">
+        <h3 id="roomName"></h3>
+        <div class="rate"><span class="amt" id="roomPrice"></span><span class="per">Per night</span></div>
+        <ul class="oneroom-feat" id="roomFeat"></ul>
+        <button class="btn btn-ink" data-book>Reserve this room</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -777,30 +754,25 @@ var CONFIG = {
 
   /* true  = show stand-in photos so the site looks complete for the client demo
      false = use the real photos you put in the images/ folder            */
-  useDemoPhotos: true,
+  useDemoPhotos: false,
 
   /* Rooms drive the room cards AND both room dropdowns.
      Edit names, prices and features here only. */
-  /* hasPhoto: false  = shows a clean typographic panel instead of a photo.
-     When the client sends a photo for that room, add the file to images/
-     and change hasPhoto to true. Nothing else to edit. */
-  rooms: [
-    { name:"Executive Single",   price:45000,  tag:"Single",   img:"images/room-executive-single.jpg",   hasPhoto:true,
-      blurb:"A compact, quiet room for one. Made for a working trip.",
-      feat:["1 double bed","Smart TV","Free wifi","Work desk"] },
-    { name:"Executive Standard", price:75000,  tag:"Standard", img:"images/room-executive-standard.jpg", hasPhoto:true,
-      blurb:"More room to spread out, with a seating corner by the window.",
-      feat:["1 queen bed","Smart TV","Free wifi","En suite"] },
-    { name:"Classic Superior",   price:80000,  tag:"Superior", img:"images/room-classic-superior.jpg",   hasPhoto:true,
-      blurb:"A larger room on the upper floors with a wider view over G.R.A.",
-      feat:["1 queen bed","Bathtub","Free wifi","Upper floor"] },
-    { name:"Superior Gold",      price:85000,  tag:"Superior", img:"images/room-superior-gold.jpg",      hasPhoto:true,
-      blurb:"Our most requested room. King bed, deep bathtub, plenty of light.",
-      feat:["1 king bed","Bathtub","Mini fridge","Upper floor"] },
-    { name:"Classic Suite",      price:105000, tag:"Suite",    img:"images/room-classic-suite.jpg",      hasPhoto:false,
-      blurb:"Our largest room, on the top floors, for longer stays.",
-      feat:["1 king bed","Bathtub","Mini fridge","Upper floor"] }
-  ]
+  /* One room type, three photos of it. Change the price,
+     the features, or add photos here and the page follows. */
+  room: {
+    name:  "Double Suite",
+    price: 40000,
+    blurb: "Every room here is the same class: a double suite with a king bed, a seating chair, a full fridge with a freezer and a private bathroom. One rate for the whole hotel, so there is nothing to compare and nothing to argue about at the desk.",
+    feat:  ["1 king bed","Private bathroom","Hot water","Air conditioning",
+            "Fridge with freezer","Smart TV","Free wifi","Wardrobe",
+            "Desk and dressing table","Room phone","Room service","Daily housekeeping"],
+    photos:[
+      { img:"images/room-1.jpg", alt:"Double Suite with king bed and seating chair" },
+      { img:"images/room-2.jpg", alt:"Double Suite, wider view" },
+      { img:"images/room-3.jpg", alt:"Double Suite bedside and fridge" }
+    ]
+  }
 };
 
 /* ============================================================
@@ -842,7 +814,7 @@ setAttr("fabWa", "href", WA_BASE + "?text=" + encodeURIComponent("Hello " + CONF
 setText("copy", "\u00A9 " + new Date().getFullYear() + " " + CONFIG.hotelName + ". All rights reserved.");
 setAttr("mapFrame", "src", "https://www.google.com/maps?q=" + encodeURIComponent(CONFIG.mapQuery) + "&output=embed");
 
-el("imgAbout").src  = photo("images/about-reception.jpg", "nvbenin-about", 900, 1120);
+el("imgAbout").src  = photo("images/about-reception.jpg", "nvbenin-about", 1100, 830);
 el("imgDining").src = photo("images/restaurant.jpg",      "nvbenin-dining", 1000, 800);
 el("imgLounge").src = photo("images/exterior-gra.jpg",    "nvbenin-address", 1000, 800);
 
@@ -1008,38 +980,19 @@ el("galGrid").innerHTML = GALLERY.map(function(g){
 /* ============================================================
    6. ROOMS + DROPDOWNS
    ============================================================ */
-/* A room with no photo gets a typographic panel rather than a
-   stand-in photo, so no guest books one room and is shown another. */
-function roomVisual(r, i){
-  if(r.hasPhoto === false && !CONFIG.useDemoPhotos){
-    var initials = r.name.split(" ").map(function(w){ return w.charAt(0); }).join("").slice(0,2).toUpperCase();
-    return '<div class="room-plate"><div class="pl-in">' +
-           '<div class="pl-mark">' + initials + '</div>' +
-           '<div class="pl-name">' + r.name + '</div>' +
-           '<div class="pl-note">Photos coming soon</div>' +
-           '</div></div>';
-  }
-  return '<img loading="lazy" src="' + photo(r.img, "nvbenin-r" + i, 800, 640) + '" alt="' + r.name + '">';
-}
-
-el("roomsGrid").innerHTML = CONFIG.rooms.map(function(r, i){
-  return '<article class="room">' +
-    '<div class="room-img"><span class="room-tag">' + r.tag + '</span>' +
-    '<div class="in">' + roomVisual(r, i) + '</div></div>' +
-    '<div class="room-body"><h3>' + r.name + '</h3><p style="font-size:.9rem;color:var(--text-soft)">' + r.blurb + '</p>' +
-    '<ul class="room-feat">' + r.feat.map(function(f){ return '<li>' + f + '</li>'; }).join("") + '</ul>' +
-    '<div class="room-price"><span class="amt">' + money(r.price) + priceFlag() + '</span><span class="per">Per night</span></div>' +
-    '<button class="btn btn-ink btn-block" data-book data-room="' + r.name + '">Reserve this room</button>' +
-    '</div></article>';
+var R = CONFIG.room;
+el("roomBlurb").textContent = R.blurb;
+el("roomName").textContent  = R.name;
+el("roomPrice").innerHTML   = money(R.price) + priceFlag();
+el("roomFeat").innerHTML    = R.feat.map(function(f){ return "<li>" + f + "</li>"; }).join("");
+el("roomShots").innerHTML   = R.photos.map(function(p, i){
+  return '<figure><img loading="lazy" src="' + photo(p.img, "nvbenin-r" + i, 900, 700) + '" alt="' + p.alt + '"></figure>';
 }).join("");
 
 var bRoom = el("bRoom"), fRm = el("fRm");
-fRm.innerHTML = '<option value="">Select a room type</option>';
-CONFIG.rooms.forEach(function(r){
-  var label = r.name + " - " + moneyPlain(r.price) + " a night";
-  bRoom.insertAdjacentHTML("beforeend", '<option value="' + r.name + '">' + label + '</option>');
-  fRm.insertAdjacentHTML("beforeend", '<option value="' + r.name + '">' + label + '</option>');
-});
+var roomLabel = R.name + " - " + moneyPlain(R.price) + " a night";
+bRoom.innerHTML = '<option value="' + R.name + '">' + roomLabel + '</option>';
+fRm.innerHTML   = '<option value="' + R.name + '">' + roomLabel + '</option>';
 
 /* Dates cannot be in the past */
 var today = new Date().toISOString().split("T")[0];
@@ -1125,7 +1078,7 @@ function collect(){
 
 function buildMessage(v){
   var price = "";
-  CONFIG.rooms.forEach(function(r){ if(r.name === v.rm){ price = " (" + moneyPlain(r.price) + " a night)"; } });
+  if(v.rm === CONFIG.room.name){ price = " (" + moneyPlain(CONFIG.room.price) + " a night)"; }
   var lines = [
     "NEW ROOM RESERVATION",
     CONFIG.hotelName,
@@ -1173,12 +1126,11 @@ function buildDraftPanel(){
     { ok: CONFIG.email.indexOf("newviewhotelbenin.com") === -1,
       t: "Real reservations email (CONFIG.email)" },
     { ok: CONFIG.pricesConfirmed,
-      t: "Confirm the five room rates, then set pricesConfirmed to true" },
+      t: "Confirm the 40,000 rate with the client, then set pricesConfirmed to true" },
     { ok: !CONFIG.useDemoPhotos,
       t: "Add real photos to images/, then set useDemoPhotos to false" },
-    { ok: CONFIG.rooms.every(function(r){ return r.hasPhoto !== false; }),
-      t: "Photos for " + CONFIG.rooms.filter(function(r){ return r.hasPhoto === false; })
-           .map(function(r){ return r.name; }).join(", ") + " (set hasPhoto to true when added)" },
+    { ok: CONFIG.room.photos.length >= 3,
+      t: "Three room photos in images/ (room-1.jpg, room-2.jpg, room-3.jpg)" },
     { ok: document.querySelector('.socials a[href="#"]') === null,
       t: "Facebook, Instagram and X links in the footer" },
     { ok: false,
