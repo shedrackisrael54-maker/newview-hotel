@@ -1,1 +1,1 @@
-# newview-hotel
+# newview-hotel hotel
