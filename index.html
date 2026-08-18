@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Benin City New View Hotel And Suites | Luxury Hotel in Benin City, Edo State</title>
-<meta name="description" content="Benin City New View Hotel And Suites offers quiet rooms and suites, an upstairs restaurant and a ground floor bar on Sapele Road, off Limit Road, G.R.A., Benin City.">
-<meta name="keywords" content="Benin City hotel, New View Hotel Benin, hotels in Benin City, Edo State hotel, hotel GRA Benin City, hotel Sapele Road Benin, hotel booking Benin City">
+<title>Benin City New View Hotel and Suite | Luxury Hotel in Benin City, Edo State</title>
+<meta name="description" content="Benin City New View Hotel and Suite offers quiet rooms and suites, an upstairs dining room and a ground floor bar at No 18 Egienaye Street, off Limit Road, G.R.A., Benin City.">
+<meta name="keywords" content="Benin City hotel, New View Hotel Benin, hotels in Benin City, Edo State hotel, hotel GRA Benin City, hotel Limit Road Benin, hotel Egienaye Street Benin, hotel booking Benin City">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Benin City New View Hotel And Suites">
-<meta property="og:description" content="Quiet rooms and suites with a restaurant upstairs, on Sapele Road in G.R.A., Benin City.">
+<meta property="og:title" content="Benin City New View Hotel and Suite">
+<meta property="og:description" content="Quiet rooms and suites with a dining room upstairs, off Limit Road in G.R.A., Benin City.">
 <meta property="og:image" content="images/og-cover.jpg">
 <link rel="icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,23 +19,23 @@
    DESIGN TOKENS
    ============================================================ */
 :root{
-  --ink:#10201B;
-  --ink-2:#183029;
-  --ink-3:#0A1613;
-  --brass:#C79A4C;
-  --brass-lt:#E0BE7E;
-  --brass-dk:#8E6C2E;
+  --ink:#2A1E15;
+  --ink-2:#3A2A1D;
+  --ink-3:#1C130D;
+  --brass:#C39A55;
+  --brass-lt:#E3C489;
+  --brass-dk:#8A6528;
   --coral:#A33C2F;
-  --sand:#F1EBE0;
-  --sand-2:#E3D9C8;
-  --paper:#FBF8F2;
-  --text:#1E1C18;
-  --text-soft:#5A554C;
-  --line:rgba(30,28,24,.14);
+  --sand:#F2ECE1;
+  --sand-2:#E4D9C7;
+  --paper:#FCF9F4;
+  --text:#241D16;
+  --text-soft:#5E5347;
+  --line:rgba(36,29,22,.15);
   --arch:50% 50% 10px 10px / 22% 22% 2% 2%;
   --arch-hero:50% 50% 10px 10px / 13% 13% 2% 2%;
   --arch-sm:52% 52% 8px 8px / 18% 18% 2% 2%;
-  --shadow:0 18px 50px -22px rgba(16,32,27,.55);
+  --shadow:0 18px 50px -22px rgba(42,30,21,.55);
   --wrap:1180px;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
@@ -83,7 +83,7 @@ p{margin:0 0 1rem}
 .btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .btn-ink:hover{background:var(--ink-2)}
 .btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-outline:hover{border-color:var(--ink);background:rgba(16,32,27,.05)}
+.btn-outline:hover{border-color:var(--ink);background:rgba(42,30,21,.05)}
 .btn-block{width:100%}
 
 /* ============================================================
@@ -95,39 +95,43 @@ p{margin:0 0 1rem}
 .utility a:hover{color:var(--brass-lt)}
 .utility svg{width:14px;height:14px;stroke:var(--brass);fill:none;stroke-width:1.6}
 
-.nav{position:sticky;top:0;z-index:60;background:rgba(16,32,27,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(199,154,76,.22)}
+.nav{position:sticky;top:0;z-index:60;background:rgba(42,30,21,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(195,154,85,.22)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.85rem;padding-bottom:.85rem}
-.brand{display:flex;align-items:center;gap:.75rem;color:var(--paper)}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--paper);min-width:0}
+.brand img.logo{
+  height:44px;width:auto;max-width:132px;object-fit:contain;display:block;
+  mix-blend-mode:screen;filter:saturate(1.05) contrast(1.04);
+}
+@media (max-width:640px){ .brand img.logo{height:38px;max-width:112px} }
 .brand-mark{width:38px;height:44px;flex:none;border:1px solid var(--brass);border-radius:var(--arch-sm);display:grid;place-items:center;font-family:"Fraunces",serif;font-size:1rem;color:var(--brass-lt);letter-spacing:.02em}
-.brand-name{display:block;font-family:"Fraunces",serif;font-size:1.12rem;line-height:1.05;letter-spacing:.01em}
-.brand-sub{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.24em;color:var(--brass);margin-top:.22rem}
+.brand-name{display:block;font-family:"Fraunces",serif;font-size:1.02rem;line-height:1.08;letter-spacing:.01em}
+.brand-sub{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.24em;color:var(--brass);margin-top:.22rem}
 .menu{display:flex;align-items:center;gap:1.7rem}
 .menu a{color:rgba(251,248,242,.86);font-size:.83rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;position:relative;padding:.2rem 0}
 .menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--brass);transition:width .3s var(--ease)}
 .menu a:hover::after{width:100%}
 .nav-cta{display:inline-flex}
-.burger{display:none;background:none;border:1px solid rgba(199,154,76,.5);border-radius:2px;padding:.55rem .6rem;cursor:pointer}
+.burger{display:none;background:none;border:1px solid rgba(195,154,85,.5);border-radius:2px;padding:.55rem .6rem;cursor:pointer}
 .burger span{display:block;width:20px;height:1.5px;background:var(--brass-lt);margin:4px 0;transition:transform .3s var(--ease),opacity .2s}
 .burger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
-.drawer{display:none;background:var(--ink-3);border-bottom:1px solid rgba(199,154,76,.22)}
+.drawer{display:none;background:var(--ink-3);border-bottom:1px solid rgba(195,154,85,.22)}
 .drawer.show{display:block}
 .drawer a{display:block;padding:.95rem 22px;color:rgba(251,248,242,.9);border-bottom:1px solid rgba(251,248,242,.07);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
 .drawer .drawer-cta{padding:1.1rem 22px 1.4rem}
 
 /* ============================================================
-   HERO  (signature arch)
+   HERO  (full bleed)
    ============================================================ */
-.hero{background:var(--ink);color:var(--paper);padding:clamp(1.1rem,2.6vw,2.2rem) 0 0;position:relative;overflow:hidden}
-.hero .hero-inner{position:relative;z-index:2}
+.hero{background:var(--ink);color:var(--paper);padding:0;position:relative;overflow:hidden}
+.hero .hero-inner{position:relative;z-index:2;max-width:none;padding:0}
 .hero-frame{
   position:relative;overflow:hidden;
-  border-radius:var(--arch-hero);border:1px solid rgba(199,154,76,.38);
-  box-shadow:var(--shadow);
-  height:calc(100vh - var(--head,120px) - var(--pad,80px));
-  height:calc(100svh - var(--head,120px) - var(--pad,80px));
-  min-height:500px;max-height:960px;
+  border-radius:0;border:none;box-shadow:none;
+  height:calc(100vh - var(--head,120px));
+  height:calc(100svh - var(--head,120px));
+  min-height:520px;max-height:1000px;
   touch-action:pan-y;cursor:grab;
 }
 .hero-frame:active{cursor:grabbing}
@@ -135,16 +139,16 @@ p{margin:0 0 1rem}
 .slide.active{opacity:1}
 .slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 7s linear}
 .slide.active img{transform:scale(1)}
-.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,19,.58) 0%,rgba(10,22,19,.18) 34%,rgba(10,22,19,.72) 72%,rgba(10,22,19,.93) 100%)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,19,13,.58) 0%,rgba(28,19,13,.18) 34%,rgba(28,19,13,.72) 72%,rgba(28,19,13,.93) 100%)}
 .hero-copy{
   position:absolute;inset:auto 0 0 0;z-index:3;text-align:center;
   width:100%;max-width:var(--wrap);margin:0 auto;
-  padding:0 clamp(1.2rem,5vw,3.2rem) clamp(4rem,8vw,5.6rem);
+  padding:0 clamp(1.2rem,5vw,3.2rem) clamp(4.6rem,9vw,6.4rem);
 }
 .hero-copy h1{
   color:var(--paper);font-weight:600;letter-spacing:-.03em;line-height:1.02;
   font-size:clamp(2.9rem,8.6vw,5.7rem);
-  text-shadow:0 3px 40px rgba(10,22,19,.7);
+  text-shadow:0 3px 40px rgba(28,19,13,.7);
 }
 .hero-copy h1 em{font-style:italic;color:var(--brass-lt)}
 .hero-sub{color:rgba(251,248,242,.94);font-size:clamp(1.02rem,1.9vw,1.32rem);font-weight:300;letter-spacing:.01em;margin:1.15rem auto 2rem;max-width:44ch}
@@ -155,10 +159,10 @@ p{margin:0 0 1rem}
 .hero-arrow{
   position:absolute;z-index:4;top:50%;transform:translateY(-50%);
   width:48px;height:48px;display:grid;place-items:center;cursor:pointer;
-  background:rgba(10,22,19,.42);border:1px solid rgba(251,248,242,.34);border-radius:50%;
+  background:rgba(28,19,13,.42);border:1px solid rgba(251,248,242,.34);border-radius:50%;
   transition:background .25s,border-color .25s;
 }
-.hero-arrow:hover{background:rgba(10,22,19,.75);border-color:var(--brass)}
+.hero-arrow:hover{background:rgba(28,19,13,.75);border-color:var(--brass)}
 .hero-arrow svg{width:19px;height:19px;stroke:var(--paper);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .hero-arrow.prev{left:clamp(.7rem,2vw,1.4rem)}
 .hero-arrow.next{right:clamp(.7rem,2vw,1.4rem)}
@@ -167,7 +171,7 @@ p{margin:0 0 1rem}
 .dot.active{background:var(--brass)}
 
 /* Booking strip */
-.booking{position:relative;z-index:5;margin-top:-3.2rem}
+.booking{position:relative;z-index:5;margin-top:-2.6rem}
 .booking-card{
   background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--brass);
   padding:1.3rem;box-shadow:var(--shadow);
@@ -179,7 +183,7 @@ p{margin:0 0 1rem}
   width:100%;padding:.72rem .7rem;border:1px solid var(--line);border-radius:2px;
   background:#fff;font-size:.92rem;transition:border-color .2s,box-shadow .2s;
 }
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(199,154,76,.18)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(195,154,85,.18)}
 .field textarea{resize:vertical;min-height:78px}
 .field .err{font-size:.72rem;color:var(--coral);display:none}
 .field.invalid input,.field.invalid select{border-color:var(--coral)}
@@ -200,7 +204,7 @@ p{margin:0 0 1rem}
 /* Welcome */
 .welcome-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
 .welcome-art{position:relative}
-.welcome-art .frame-main{border-radius:var(--arch-hero);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.welcome-art .frame-main{border-radius:2px;overflow:hidden;border:1px solid rgba(30,28,24,.22);aspect-ratio:4/3}
 .welcome-art .frame-main img{width:100%;height:100%;object-fit:cover}
 .badge{
   position:absolute;right:-10px;bottom:26px;background:var(--ink);color:var(--paper);
@@ -216,14 +220,14 @@ p{margin:0 0 1rem}
 .amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.6rem}
 .amen{background:var(--paper);padding:2rem 1.5rem;transition:background .3s var(--ease)}
 .amen:hover{background:#fff}
-.amen-ic{width:44px;height:44px;border:1px solid var(--brass);border-radius:var(--arch-sm);display:grid;place-items:center;margin-bottom:1rem}
+.amen-ic{width:44px;height:44px;border:1.5px solid var(--brass);border-radius:2px;display:grid;place-items:center;margin-bottom:1rem}
 .amen-ic svg{width:21px;height:21px;stroke:var(--brass-dk);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .amen h3{font-size:1.08rem;margin-bottom:.4rem}
 .amen p{font-size:.88rem;color:var(--text-soft);margin:0}
 
 /* Why us */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.8rem}
-.why{border-top:1px solid rgba(199,154,76,.4);padding-top:1.3rem}
+.why{border-top:1px solid rgba(195,154,85,.4);padding-top:1.3rem}
 .why .idx{font-family:"Fraunces",serif;font-size:.95rem;color:var(--brass);letter-spacing:.1em;display:block;margin-bottom:.6rem}
 .why h3{color:var(--paper);margin-bottom:.5rem}
 .why p{color:rgba(251,248,242,.72);font-size:.9rem;margin:0}
@@ -233,8 +237,8 @@ p{margin:0 0 1rem}
 /* Single room type layout */
 .oneroom{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.8rem,5vw,3.6rem);align-items:center;margin-top:2.8rem}
 .oneroom-shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.oneroom-shots figure{margin:0;overflow:hidden;border-radius:6px;aspect-ratio:1}
-.oneroom-shots figure:first-child{grid-column:1/-1;aspect-ratio:16/11;border-radius:var(--arch-sm)}
+.oneroom-shots figure{margin:0;overflow:hidden;border-radius:2px;aspect-ratio:1}
+.oneroom-shots figure:first-child{grid-column:1/-1;aspect-ratio:16/11;border-radius:2px}
 .oneroom-shots img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .oneroom-shots figure:hover img{transform:scale(1.05)}
 .oneroom-body .rate{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin:1.2rem 0 .2rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
@@ -248,20 +252,20 @@ p{margin:0 0 1rem}
 /* Split feature */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,5vw,4.5rem);align-items:center}
 .split.flip .split-art{order:2}
-.split-art{border-radius:var(--arch);overflow:hidden;aspect-ratio:5/4;border:1px solid var(--line)}
+.split-art{border-radius:2px;overflow:hidden;aspect-ratio:5/4;border:1px solid rgba(30,28,24,.22)}
 .split-art img{width:100%;height:100%;object-fit:cover}
 .split-body h2{margin-bottom:.9rem}
 
 /* Gallery */
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:2.6rem}
-.gal figure{position:relative;margin:0;overflow:hidden;aspect-ratio:1;border-radius:6px}
-.gal figure.tall{grid-row:span 2;aspect-ratio:1/2.06;border-radius:var(--arch-sm)}
+.gal figure{position:relative;margin:0;overflow:hidden;aspect-ratio:1;border-radius:2px}
+.gal figure.tall{grid-row:span 2;aspect-ratio:1/2.06;border-radius:2px}
 .gal figure.wide{grid-column:span 2;aspect-ratio:2.06/1}
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .gal figure:hover img{transform:scale(1.07)}
 .gal figcaption{
   position:absolute;inset:auto 0 0 0;padding:.9rem;font-size:.74rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--paper);background:linear-gradient(transparent,rgba(10,22,19,.85));
+  text-transform:uppercase;color:var(--paper);background:linear-gradient(transparent,rgba(28,19,13,.85));
   opacity:0;transform:translateY(8px);transition:opacity .35s var(--ease),transform .35s var(--ease);
 }
 .gal figure:hover figcaption{opacity:1;transform:none}
@@ -273,7 +277,7 @@ p{margin:0 0 1rem}
 
 /* Location */
 .loc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.6rem,4vw,3rem);align-items:stretch}
-.map-frame{border:1px solid var(--line);border-radius:6px;overflow:hidden;min-height:340px;background:var(--sand-2)}
+.map-frame{border:1px solid rgba(30,28,24,.22);border-radius:2px;overflow:hidden;min-height:340px;background:var(--sand-2)}
 .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
 .loc-list{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:1.2rem}
 .loc-list li{display:flex;gap:.9rem}
@@ -288,8 +292,8 @@ p{margin:0 0 1rem}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.9rem}
 .foot a:hover{color:var(--brass-lt)}
 .socials{display:flex;gap:.6rem;margin-top:1rem}
-.socials a{width:38px;height:38px;border:1px solid rgba(199,154,76,.4);border-radius:2px;display:grid;place-items:center;transition:background .25s,border-color .25s}
-.socials a:hover{background:rgba(199,154,76,.16);border-color:var(--brass)}
+.socials a{width:38px;height:38px;border:1px solid rgba(195,154,85,.4);border-radius:2px;display:grid;place-items:center;transition:background .25s,border-color .25s}
+.socials a:hover{background:rgba(195,154,85,.16);border-color:var(--brass)}
 .socials svg{width:16px;height:16px;stroke:var(--brass-lt);fill:none;stroke-width:1.6}
 .foot-base{margin-top:2.8rem;border-top:1px solid rgba(251,248,242,.1);padding:1.3rem 0;font-size:.8rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between}
 
@@ -334,7 +338,7 @@ p{margin:0 0 1rem}
    ============================================================ */
 .modal{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}
 .modal.show{display:flex}
-.modal-bg{position:fixed;inset:0;background:rgba(10,22,19,.72);backdrop-filter:blur(3px)}
+.modal-bg{position:fixed;inset:0;background:rgba(28,19,13,.72);backdrop-filter:blur(3px)}
 .modal-card{
   position:relative;background:var(--paper);width:100%;max-width:660px;margin:auto;
   border-top:3px solid var(--brass);box-shadow:var(--shadow);
@@ -353,6 +357,19 @@ p{margin:0 0 1rem}
 /* Reveal on scroll */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
+
+/* Feature images glide in from the left and settle.
+   Used only on the large picture blocks, not on every card,
+   so the movement stays deliberate rather than busy. */
+.slide-in{
+  opacity:0;transform:translateX(-64px);
+  transition:opacity 1.05s var(--ease),transform 1.15s var(--ease);
+  will-change:transform,opacity;
+}
+.slide-in.in{opacity:1;transform:none}
+@media (max-width:640px){
+  .slide-in{transform:translateX(-34px)}
+}
 
 /* Focus visibility */
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
@@ -373,15 +390,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media (max-width:640px){
   .wrap{padding:0 16px}
-  .hero-frame{min-height:460px;border-radius:var(--arch)}
-  .hero-copy{padding-left:16px;padding-right:16px}
+  .hero-frame{min-height:480px;border-radius:0}
+  .hero-copy{padding-left:18px;padding-right:18px}
   .booking{margin-top:-2.2rem}
   .booking-card{grid-template-columns:1fr;padding:1.1rem}
   .amen-grid,.why-grid,.rooms-grid,.stats,.foot-grid,.form-grid{grid-template-columns:1fr}
   .stats{gap:1.8rem}
   .perks{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr 1fr}
-  .gal figure.tall{grid-row:span 1;aspect-ratio:1;border-radius:6px}
+  .gal figure.tall{grid-row:span 1;aspect-ratio:1;border-radius:2px}
   .gal figure.wide{grid-column:span 2}
   .badge{right:8px;bottom:12px}
   .modal-actions{grid-template-columns:1fr}
@@ -390,7 +407,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}
+  .rv,.slide-in{opacity:1;transform:none}
   .slide img{transform:none}
 }
 </style>
@@ -416,10 +433,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top">
-      <span class="brand-mark">NV</span>
+      <span class="brand-mark" id="markA">N</span>
       <span>
-        <span class="brand-name">New View</span>
-        <span class="brand-sub">Hotel &amp; Suites</span>
+        <span class="brand-name">Benin City New View</span>
+        <span class="brand-sub">Hotel and Suite</span>
       </span>
     </a>
     <nav class="menu">
@@ -453,7 +470,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <!-- slides injected -->
       <div class="hero-copy">
         <h1 id="heroTitle">A new view of <em>Benin City</em></h1>
-        <p class="hero-sub" id="heroSub">Quiet rooms, warm service and a kitchen one floor up.</p>
+        <p class="hero-sub" id="heroSub">Quiet rooms, warm service and a dining room one floor up.</p>
         <div class="hero-actions">
           <button class="btn btn-brass" data-book>Reserve a room</button>
           <a class="btn btn-ghost" href="#rooms">View our rooms</a>
@@ -490,8 +507,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <!-- ===================== WELCOME ===================== -->
 <section class="sec" id="about">
   <div class="wrap welcome-grid">
-    <div class="welcome-art rv">
-      <div class="frame-main"><img id="imgAbout" alt="Reception at Benin City New View Hotel And Suites"></div>
+    <div class="welcome-art slide-in">
+      <div class="frame-main"><img id="imgAbout" alt="Reception at Benin City New View Hotel and Suite"></div>
       <div class="badge">
         <div class="num">40+</div>
         <div class="lbl">Rooms and suites</div>
@@ -499,9 +516,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     </div>
     <div class="rv">
       <span class="eyebrow">Welcome</span>
-      <h2>Sapele Road address. G.R.A. quiet.</h2>
-      <p class="lead">We sit on Sapele Road, just off Limit Road, on the G.R.A. side of Benin City. It is the rare address that is easy to reach and easy to sleep in. The main road carries you anywhere in the city in minutes, while G.R.A. keeps the traffic, the noise and the crowd one street away.</p>
-      <p class="lead">Every room has a proper bed, fast wifi, a smart TV and power that does not go off. One floor up, the restaurant runs from early morning until late. On the ground floor there is a bar a few steps off the reception, and a front desk that never closes.</p>
+      <h2>Off Limit Road. G.R.A. quiet.</h2>
+      <p class="lead">We sit on Egienaye Street, just off Limit Road, on the G.R.A. side of Benin City. It is the rare address that is easy to reach and easy to sleep in. The main road carries you anywhere in the city in minutes, while G.R.A. keeps the traffic, the noise and the crowd one street away.</p>
+      <p class="lead">Every room has a proper bed, fast wifi, a smart TV and power that does not go off. One floor up, the dining room runs from early morning until late. On the ground floor there is a bar a few steps off the reception, and a front desk that never closes.</p>
       <ul class="perks">
         <li>Power around the clock</li>
         <li>Secure parking on site</li>
@@ -550,7 +567,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <p class="lead" id="roomBlurb"></p>
     </div>
     <div class="oneroom rv">
-      <div class="oneroom-shots" id="roomShots"></div>
+      <div class="oneroom-shots slide-in" id="roomShots"></div>
       <div class="oneroom-body">
         <h3 id="roomName"></h3>
         <div class="rate"><span class="amt" id="roomPrice"></span><span class="per">Per night</span></div>
@@ -564,14 +581,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <!-- ===================== DINING ===================== -->
 <section class="sec sec-sand" id="dining">
   <div class="wrap split rv">
-    <div class="split-art"><img id="imgDining" alt="Restaurant at New View Hotel And Suites"></div>
+    <div class="split-art slide-in"><img id="imgDining" alt="Restaurant at Benin City New View Hotel and Suite"></div>
     <div class="split-body">
-      <span class="eyebrow">The restaurant, upstairs</span>
-      <h2>One floor up, with G.R.A. out the window</h2>
-      <p class="lead">The kitchen sits on the upper floor, so lunch comes with the tree line of G.R.A. through the glass instead of the car park. Banga, egusi and pepper soup share a menu with grills, pasta and a full English breakfast.</p>
-      <p class="lead">Open from 7:00am to 11:00pm, with room service running through the night. Tell us about allergies or a special menu when you book and the kitchen will plan for it.</p>
-      <p class="lead">The bar is a separate room on the ground floor, a few steps from reception. Different room, different mood: somewhere to sit with a drink after a long day without walking back into a dining room.</p>
-      <p class="lead">If you would rather not go up, the bar sits on the ground floor a few steps off the reception. Same drinks list, no stairs.</p>
+      <span class="eyebrow">The dining room, upstairs</span>
+      <h2>A room of glass, one floor up</h2>
+      <p class="lead">The dining room runs along the upper floor behind a wall of glass, so you eat in daylight with the whole street below you rather than in a back room with the curtains drawn. Banga, egusi and pepper soup share a menu with grills, pasta and a full English breakfast.</p>
+      <p class="lead">Open from 7:00am to 11:00pm, with room service running through the night. Tell us about allergies or a special menu when you book and we will plan for it.</p>
+      <p class="lead">Stocked shelves, stools, cold beer and spirits kept properly cold.</p>
       <button class="btn btn-ink" data-book>Book a table with your room</button>
     </div>
   </div>
@@ -579,11 +595,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <section class="sec">
   <div class="wrap split flip rv">
-    <div class="split-art"><img id="imgLounge" alt="The hotel on Sapele Road, G.R.A."></div>
+    <div class="split-art slide-in"><img id="imgLounge" alt="The hotel on Egienaye Street, G.R.A."></div>
     <div class="split-body">
       <span class="eyebrow">The address</span>
       <h2>A street away from the noise</h2>
-      <p class="lead">Sapele Road is one of the main arteries of Benin City. Limit Road turns you into G.R.A., where the streets are wide, the compounds are gated and the evenings are quiet. You get the connection of the main road and the calm of the reserve at the same time.</p>
+      <p class="lead">Limit Road turns you into G.R.A., where the streets are wide, the compounds are gated and the evenings go quiet early. Egienaye Street sits a turn further in again, so the last stretch of your journey is the calmest part of it.</p>
       <p class="lead">Ring Road, the banks and the government offices are a short drive out. The airport is closer still. Send us your flight details and a car will be waiting.</p>
       <a class="btn btn-outline" href="#contact">Talk to the front desk</a>
     </div>
@@ -614,11 +630,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="rv">
       <span class="eyebrow">Find us</span>
       <h2>Getting here</h2>
-      <p class="lead">Sapele Road, just off Limit Road, in G.R.A. A short drive from the airport and from Ring Road. Send us your flight details and we will arrange the pick up.</p>
+      <p class="lead">No 18 Egienaye Street, just off Limit Road, in G.R.A. A short drive from the airport and from Ring Road. Send us your flight details and we will arrange the pick up.</p>
       <ul class="loc-list">
         <li>
           <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-          <div><div class="k">Address</div><div class="v" id="cAddr">Sapele Road, off Limit Road, G.R.A., Benin City</div></div>
+          <div><div class="k">Address</div><div class="v" id="cAddr">No 18 Egienaye Street, off Limit Road, G.R.A., Benin City</div></div>
         </li>
         <li>
           <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
@@ -644,10 +660,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top" style="margin-bottom:1rem">
-          <span class="brand-mark">NV</span>
-          <span><span class="brand-name">New View</span><span class="brand-sub">Hotel &amp; Suites</span></span>
+          <span class="brand-mark" id="markB">N</span>
+          <span><span class="brand-name">Benin City New View</span><span class="brand-sub">Hotel and Suite</span></span>
         </a>
-        <p style="font-size:.9rem;max-width:34ch">Rooms and suites, a restaurant upstairs and a bar downstairs, on Sapele Road in G.R.A., Benin City. Open every hour of the year.</p>
+        <p style="font-size:.9rem;max-width:34ch">Rooms and suites, a dining room upstairs and a bar on the ground floor, off Limit Road in G.R.A., Benin City. Open every hour of the year.</p>
         <div class="socials">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3H12V6.5A.5.5 0 0 1 12.5 6H15z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9"/></svg></a>
@@ -676,15 +692,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <div>
         <h4>Visit</h4>
         <ul>
-          <li id="fAddr">Sapele Road, off Limit Road, G.R.A., Benin City</li>
+          <li id="fAddr">No 18 Egienaye Street, off Limit Road, G.R.A., Benin City</li>
           <li><a id="fMail" href="mailto:info@example.com">info@example.com</a></li>
-          <li>Check in from 12:00pm</li>
-          <li>Check out by 12:00pm</li>
         </ul>
       </div>
     </div>
     <div class="foot-base">
-      <span id="copy">&copy; 2026 Benin City New View Hotel And Suites. All rights reserved.</span>
+      <span id="copy">&copy; 2026 Benin City New View Hotel and Suite. All rights reserved.</span>
       <span>Benin City, Edo State, Nigeria</span>
     </div>
   </div>
@@ -731,7 +745,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
    1. CONFIG  --  EDIT THIS BLOCK ONLY
    ============================================================ */
 var CONFIG = {
-  hotelName: "Benin City New View Hotel And Suites",
+  hotelName: "Benin City New View Hotel and Suite",
 
   /* ---- DRAFT SWITCHES ----------------------------------------
      draftMode true  = shows a checklist button on the page listing
@@ -743,18 +757,24 @@ var CONFIG = {
   pricesConfirmed: false,
 
   /* Contact details -- replace all four with the real ones */
-  phoneDisplay: "+234 000 000 0000",
-  phoneDial:    "+2340000000000",
-  whatsapp:     "2340000000000",   /* country code, no plus, no spaces */
+  phoneDisplay: "0707 831 6662",
+  phoneDial:    "+2347078316662",
+  whatsapp:     "2349069172322",   /* TEST NUMBER - swap for the hotel's real WhatsApp before handover */
   email:        "info@newviewhotelbenin.com",
 
-  /* Address + map. mapQuery is what Google Maps searches for. */
-  address:  "Sapele Road, off Limit Road, G.R.A., Benin City, Edo State",
-  mapQuery: "Sapele Road, GRA, Benin City, Edo State, Nigeria",
+  /* One address, used for the text on the page and for the map.
+     If the map pin lands in the wrong spot, set mapQuery to the
+     exact coordinates instead, e.g. "6.3350,5.6037". */
+  address:  "No 18 Egienaye Street, off Limit Road, G.R.A., Benin City",
+  mapQuery: "No 18 Egienaye Street, off Limit Road, GRA, Benin City, Edo State, Nigeria",
 
   /* true  = show stand-in photos so the site looks complete for the client demo
      false = use the real photos you put in the images/ folder            */
   useDemoPhotos: false,
+
+  /* Optional. Put the logo in images/logo.png and it replaces the
+     lettermark in the header and footer. Leave "" to keep the letter. */
+  logoFile: "images/logo.jpg",
 
   /* Rooms drive the room cards AND both room dropdowns.
      Edit names, prices and features here only. */
@@ -814,6 +834,15 @@ setAttr("fabWa", "href", WA_BASE + "?text=" + encodeURIComponent("Hello " + CONF
 setText("copy", "\u00A9 " + new Date().getFullYear() + " " + CONFIG.hotelName + ". All rights reserved.");
 setAttr("mapFrame", "src", "https://www.google.com/maps?q=" + encodeURIComponent(CONFIG.mapQuery) + "&output=embed");
 
+if(CONFIG.logoFile){
+  ["markA","markB"].forEach(function(id){
+    var n = el(id); if(!n){ return; }
+    var img = document.createElement("img");
+    img.className = "logo"; img.src = CONFIG.logoFile; img.alt = CONFIG.hotelName;
+    n.parentNode.replaceChild(img, n);
+  });
+}
+
 el("imgAbout").src  = photo("images/about-reception.jpg", "nvbenin-about", 1100, 830);
 el("imgDining").src = photo("images/restaurant.jpg",      "nvbenin-dining", 1000, 800);
 el("imgLounge").src = photo("images/exterior-gra.jpg",    "nvbenin-address", 1000, 800);
@@ -827,11 +856,6 @@ function setHeadHeight(){
   var u = document.querySelector(".utility"), n = document.querySelector(".nav");
   var h = (u ? u.offsetHeight : 0) + (n ? n.offsetHeight : 0);
   document.documentElement.style.setProperty("--head", h + "px");
-  var hero = document.querySelector(".hero");
-  if(hero){
-    var pad = parseFloat(getComputedStyle(hero).paddingTop) || 0;
-    document.documentElement.style.setProperty("--pad", Math.round(pad * 2.1) + "px");
-  }
 }
 setHeadHeight();
 window.addEventListener("resize", setHeadHeight);
@@ -840,7 +864,7 @@ window.addEventListener("orientationchange", function(){ setTimeout(setHeadHeigh
 var SLIDES = [
   { img:"images/hero-1.jpg", seed:"nvbenin-h1",
     title:"A new view of <em>Benin City</em>",
-    sub:"Quiet rooms, warm service and a kitchen one floor up, on the G.R.A. side of Sapele Road." },
+    sub:"Quiet rooms, warm service and a dining room one floor up, on the quiet side of G.R.A." },
   { img:"images/hero-2.jpg", seed:"nvbenin-h2",
     title:"Sleep well. <em>Every night.</em>",
     sub:"Power around the clock, fast wifi and a front desk that answers at 3am." },
@@ -957,7 +981,7 @@ var STATS = [
   { n:"40+", l:"Rooms and suites" },
   { n:"24/7", l:"Front desk and power" },
   { n:"1,000+", l:"Guests hosted" },
-  { n:"G.R.A.", l:"On Sapele Road" }
+  { n:"G.R.A.", l:"Off Limit Road" }
 ];
 el("statsGrid").innerHTML = STATS.map(function(s){
   return '<div class="stat"><div class="n">' + s.n + '</div><div class="l">' + s.l + '</div></div>';
@@ -968,7 +992,7 @@ var GALLERY = [
   { c:"The restaurant upstairs", f:"wide", img:"images/gal-restaurant.jpg", seed:"nvbenin-g2", w:1400, h:700 },
   { c:"The bar",              f:"",     img:"images/gal-bar.jpg",        seed:"nvbenin-g3", w:800,  h:800 },
   { c:"A guest room",         f:"",     img:"images/gal-superior.jpg",   seed:"nvbenin-g4", w:800,  h:800 },
-  { c:"On Sapele Road",       f:"wide", img:"images/gal-exterior.jpg",   seed:"nvbenin-g5", w:1400, h:700 },
+  { c:"Egienaye Street, G.R.A.", f:"wide", img:"images/gal-exterior.jpg", seed:"nvbenin-g5", w:1400, h:700 },
   { c:"Guest bathroom",       f:"",     img:"images/gal-bath.jpg",       seed:"nvbenin-g6", w:800,  h:800 },
   { c:"The view over G.R.A.", f:"",     img:"images/gal-view.jpg",       seed:"nvbenin-g7", w:800,  h:800 }
 ];
@@ -1134,7 +1158,7 @@ function buildDraftPanel(){
     { ok: document.querySelector('.socials a[href="#"]') === null,
       t: "Facebook, Instagram and X links in the footer" },
     { ok: false,
-      t: "Verify the invented figures: 40+ rooms, 1,000+ guests, breakfast, airport pick up, bathtubs, 7am-11pm kitchen" }
+      t: "Verify the invented figures: 40+ rooms, 1,000+ guests, breakfast, airport pick up, 7am-11pm dining hours" }
   ];
 
   var todo = items.filter(function(i){ return !i.ok; }).length;
@@ -1170,9 +1194,9 @@ if("IntersectionObserver" in window){
       if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
     });
   }, { threshold:.12, rootMargin:"0px 0px -40px 0px" });
-  document.querySelectorAll(".rv").forEach(function(n){ io.observe(n); });
+  document.querySelectorAll(".rv, .slide-in").forEach(function(n){ io.observe(n); });
 } else {
-  document.querySelectorAll(".rv").forEach(function(n){ n.classList.add("in"); });
+  document.querySelectorAll(".rv, .slide-in").forEach(function(n){ n.classList.add("in"); });
 }
 </script>
 </body>
